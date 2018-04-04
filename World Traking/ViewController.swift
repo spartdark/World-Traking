@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     
     @IBAction func addBtn(_ sender: Any) {
         let node = SCNNode()
-        node.geometry = SCNBox(width: 0.1, height: 0.1,length: 0.1,chamferRadius: 0.3)
+        node.geometry = SCNCapsule(capRadius: 0.1, height: 0.3)
+        //node.geometry = SCNBox(width: 0.1, height: 0.1,length: 0.1,chamferRadius: 0.3)
         node.geometry?.firstMaterial?.specular.contents = UIColor.white
         node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
         let x = randomNumbers(firstnum: -0.3, secondNumb: 0.3)
